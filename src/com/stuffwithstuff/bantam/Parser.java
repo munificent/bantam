@@ -23,7 +23,7 @@ public class Parser {
     mInfixParselets.put(token, parselet);
   }
   
-  public Expression parseExpression(int stickiness) {
+  public Expression parseExpression(int precedence) {
     Token token = consume();
     PrefixParselet prefix = mPrefixParselets.get(token.getType());
     
@@ -32,7 +32,7 @@ public class Parser {
     
     Expression left = prefix.parse(this, token);
     
-    while (stickiness < getStickiness()) {
+    while (precedence < getPrecedence()) {
       token = consume();
       
       InfixParselet infix = mInfixParselets.get(token.getType());
@@ -83,15 +83,15 @@ public class Parser {
     return mRead.get(distance);
   }
 
-  private int getStickiness() {
-    int stickiness = 0;
+  private int getPrecedence() {
+    int precedence = 0;
 
     InfixParselet parser = mInfixParselets.get(lookAhead(0).getType());
     if (parser != null) {
-      stickiness = parser.getPrecedence();
+      precedence = parser.getPrecedence();
     }
     
-    return stickiness;
+    return precedence;
   }
   
   private final Iterator<Token> mTokens;
