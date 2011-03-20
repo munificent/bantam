@@ -1,2 +1,5 @@
 # Ignore output files
 bin/
+.gradle/
+build/
+
