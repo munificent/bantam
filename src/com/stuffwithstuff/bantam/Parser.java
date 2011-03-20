@@ -84,14 +84,10 @@ public class Parser {
   }
 
   private int getPrecedence() {
-    int precedence = 0;
-
     InfixParselet parser = mInfixParselets.get(lookAhead(0).getType());
-    if (parser != null) {
-      precedence = parser.getPrecedence();
-    }
+    if (parser != null) return parser.getPrecedence();
     
-    return precedence;
+    return 0;
   }
   
   private final Iterator<Token> mTokens;
