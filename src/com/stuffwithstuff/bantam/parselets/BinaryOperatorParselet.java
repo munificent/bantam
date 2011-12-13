@@ -2,7 +2,6 @@ package com.stuffwithstuff.bantam.parselets;
 
 import com.stuffwithstuff.bantam.Parser;
 import com.stuffwithstuff.bantam.Token;
-import com.stuffwithstuff.bantam.TokenType;
 import com.stuffwithstuff.bantam.expressions.Expression;
 import com.stuffwithstuff.bantam.expressions.OperatorExpression;
 
@@ -12,9 +11,7 @@ import com.stuffwithstuff.bantam.expressions.OperatorExpression;
  * associativity, so we can use a single parselet class for all of those.
  */
 public class BinaryOperatorParselet implements InfixParselet {
-  public BinaryOperatorParselet(
-      TokenType operator, int precedence, boolean isRight) {
-    mOperator = operator;
+  public BinaryOperatorParselet(int precedence, boolean isRight) {
     mPrecedence = precedence;
     mIsRight = isRight;
   }
@@ -27,14 +24,13 @@ public class BinaryOperatorParselet implements InfixParselet {
     Expression right = parser.parseExpression(
         mPrecedence - (mIsRight ? 1 : 0));
     
-    return new OperatorExpression(left, mOperator, right);
+    return new OperatorExpression(left, token.getType(), right);
   }
 
   public int getPrecedence() {
     return mPrecedence;
   }
   
-  private final TokenType mOperator;
   private final int mPrecedence;
   private final boolean mIsRight;
 }

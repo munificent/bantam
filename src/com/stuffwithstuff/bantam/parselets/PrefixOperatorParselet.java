@@ -2,7 +2,6 @@ package com.stuffwithstuff.bantam.parselets;
 
 import com.stuffwithstuff.bantam.Parser;
 import com.stuffwithstuff.bantam.Token;
-import com.stuffwithstuff.bantam.TokenType;
 import com.stuffwithstuff.bantam.expressions.Expression;
 import com.stuffwithstuff.bantam.expressions.PrefixExpression;
 
@@ -11,8 +10,7 @@ import com.stuffwithstuff.bantam.expressions.PrefixExpression;
  * unary "-", "+", "~", and "!" expressions.
  */
 public class PrefixOperatorParselet implements PrefixParselet {
-  public PrefixOperatorParselet(TokenType operator, int precedence) {
-    mOperator = operator;
+  public PrefixOperatorParselet(int precedence) {
     mPrecedence = precedence;
   }
   
@@ -23,13 +21,12 @@ public class PrefixOperatorParselet implements PrefixParselet {
     // take *this* parselet's result as its left-hand argument.
     Expression right = parser.parseExpression(mPrecedence);
     
-    return new PrefixExpression(mOperator, right);
+    return new PrefixExpression(token.getType(), right);
   }
 
   public int getPrecedence() {
     return mPrecedence;
   }
   
-  private final TokenType mOperator;
   private final int mPrecedence;
 }

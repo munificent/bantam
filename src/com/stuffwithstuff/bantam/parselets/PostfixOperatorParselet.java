@@ -2,7 +2,6 @@ package com.stuffwithstuff.bantam.parselets;
 
 import com.stuffwithstuff.bantam.Parser;
 import com.stuffwithstuff.bantam.Token;
-import com.stuffwithstuff.bantam.TokenType;
 import com.stuffwithstuff.bantam.expressions.Expression;
 import com.stuffwithstuff.bantam.expressions.PostfixExpression;
 
@@ -11,19 +10,17 @@ import com.stuffwithstuff.bantam.expressions.PostfixExpression;
  * unary "?" expressions.
  */
 public class PostfixOperatorParselet implements InfixParselet {
-  public PostfixOperatorParselet(TokenType operator, int precedence) {
-    mOperator = operator;
+  public PostfixOperatorParselet(int precedence) {
     mPrecedence = precedence;
   }
   
   public Expression parse(Parser parser, Expression left, Token token) {
-    return new PostfixExpression(left, mOperator);
+    return new PostfixExpression(left, token.getType());
   }
 
   public int getPrecedence() {
     return mPrecedence;
   }
   
-  private final TokenType mOperator;
   private final int mPrecedence;
 }

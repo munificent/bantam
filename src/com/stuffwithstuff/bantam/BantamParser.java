@@ -40,7 +40,7 @@ public class BantamParser extends Parser {
    * precedence.
    */
   public void postfix(TokenType token, int precedence) {
-    register(token, new PostfixOperatorParselet(token, precedence));
+    register(token, new PostfixOperatorParselet(precedence));
   }
   
   /**
@@ -48,7 +48,7 @@ public class BantamParser extends Parser {
    * precedence.
    */
   public void prefix(TokenType token, int precedence) {
-    register(token, new PrefixOperatorParselet(token, precedence));
+    register(token, new PrefixOperatorParselet(precedence));
   }
   
   /**
@@ -56,7 +56,7 @@ public class BantamParser extends Parser {
    * and precedence.
    */
   public void infixLeft(TokenType token, int precedence) {
-    register(token, new BinaryOperatorParselet(token, precedence, false));
+    register(token, new BinaryOperatorParselet(precedence, false));
   }
   
   /**
@@ -64,6 +64,6 @@ public class BantamParser extends Parser {
    * and precedence.
    */
   public void infixRight(TokenType token, int precedence) {
-    register(token, new BinaryOperatorParselet(token, precedence, true));
+    register(token, new BinaryOperatorParselet(precedence, true));
   }
 }
