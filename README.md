@@ -8,9 +8,11 @@ The code here has also been ported to:
 - [Kotlin][kotlin] by hiperbou,
 - [C++][cpp] and [Rust][rust] by Jürgen Wurzer,
 - [Python][python] by Kuba Sunderland-Ober.
+- [MiniScript][miniscript] by Joe Strout.
 
 [csharp]: https://github.com/jfcardinal/BantamCs
 [kotlin]: https://github.com/hiperbou/bantam-kotlin
 [cpp]: https://github.com/jwurzer/bantam-cpp
 [rust]: https://github.com/jwurzer/bantam-rust
 [python]: https://github.com/KubaO/pybantam
+[miniscript]: https://github.com/JoeStrout/bantam-miniscript
