@@ -9,6 +9,7 @@ The code here has also been ported to:
 - [C++][cpp] and [Rust][rust] by Jürgen Wurzer,
 - [Python][python] by Kuba Sunderland-Ober.
 - [MiniScript][miniscript] by Joe Strout.
+- [TypeScript][typescript] by May Tusek. <!-- Not sure if this should be a comma or period, IMO refactor all to periods. -->
 
 [csharp]: https://github.com/jfcardinal/BantamCs
 [kotlin]: https://github.com/hiperbou/bantam-kotlin
@@ -16,3 +17,4 @@ The code here has also been ported to:
 [rust]: https://github.com/jwurzer/bantam-rust
 [python]: https://github.com/KubaO/pybantam
 [miniscript]: https://github.com/JoeStrout/bantam-miniscript
+[typescript]: https://github.com/queercat/bantam-pratt-parser-typescript
