@@ -4,12 +4,12 @@ explanation, see [this blog post][blog].
 [blog]: http://journal.stuffwithstuff.com/2011/03/19/pratt-parsers-expression-parsing-made-easy/
 
 The code here has also been ported to:
-- [C#][csharp] by John Cardinal,
-- [Kotlin][kotlin] by hiperbou,
-- [C++][cpp] and [Rust][rust] by Jürgen Wurzer,
-- [Python][python] by Kuba Sunderland-Ober.
-- [MiniScript][miniscript] by Joe Strout.
-- [TypeScript][typescript] by May Tusek. <!-- Not sure if this should be a comma or period, IMO refactor all to periods. -->
+- [C#][csharp] by John Cardinal
+- [Kotlin][kotlin] by hiperbou
+- [C++][cpp] and [Rust][rust] by Jürgen Wurzer
+- [Python][python] by Kuba Sunderland-Ober
+- [MiniScript][miniscript] by Joe Strout
+- [TypeScript][typescript] by May Tusek
 
 [csharp]: https://github.com/jfcardinal/BantamCs
 [kotlin]: https://github.com/hiperbou/bantam-kotlin
