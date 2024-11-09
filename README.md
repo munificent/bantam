@@ -10,6 +10,7 @@ The code here has also been ported to:
 - [Python][python] by Kuba Sunderland-Ober
 - [MiniScript][miniscript] by Joe Strout
 - [TypeScript][typescript] by May Tusek
+- [Go][go] by Dongyeong Chon
 
 [csharp]: https://github.com/jfcardinal/BantamCs
 [kotlin]: https://github.com/hiperbou/bantam-kotlin
@@ -18,3 +19,4 @@ The code here has also been ported to:
 [python]: https://github.com/KubaO/pybantam
 [miniscript]: https://github.com/JoeStrout/bantam-miniscript
 [typescript]: https://github.com/queercat/bantam-pratt-parser-typescript
+[go]: https://github.com/obzva/bantam-go
