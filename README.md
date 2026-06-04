@@ -11,6 +11,7 @@ The code here has also been ported to:
 - [MiniScript][miniscript] by Joe Strout
 - [TypeScript][typescript] by May Tusek
 - [Go][go] by Dongyeong Chon
+- [Odin][odin] by Robert Monnet
 
 [csharp]: https://github.com/jfcardinal/BantamCs
 [kotlin]: https://github.com/hiperbou/bantam-kotlin
@@ -20,3 +21,4 @@ The code here has also been ported to:
 [miniscript]: https://github.com/JoeStrout/bantam-miniscript
 [typescript]: https://github.com/queercat/bantam-pratt-parser-typescript
 [go]: https://github.com/obzva/bantam-go
+[odin]: https://github.com/rmonnet/barbu
